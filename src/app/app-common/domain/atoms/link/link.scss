@@ -1,8 +1,8 @@
 @import "../../styles/font-size.scss";
 @import "../../styles/colors.scss";
 
-.cursor-default:hover{
-    cursor: default;
+.text-color-3{
+    color: $color_3;
 }
 .fs-7 {
     font-size: $fs-7;
@@ -10,6 +10,6 @@
 .fs-8{
     font-size: $fs-8;
 }
-.text-color-1{
-    color: $color_1;
+.hover:hover{
+  color: black;
 }

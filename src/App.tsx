@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-
-import Home from './app/home/feature-home/Home';
+import FeatureProductDetail from './app/product/feature-product-detail/Feature-product-detail';
 
 import './App.css';
+
 
 function App() {
   return (
     <div>
       <Routes>
-        <Route path='/home' element={<Home/>} />
+        <Route path='/producto/:id' element={<FeatureProductDetail />} />
       </Routes>
     </div>
   );
