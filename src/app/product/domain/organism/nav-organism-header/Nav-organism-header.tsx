@@ -23,7 +23,7 @@ export default function NavOrganismHeader() {
         <Image src={require('../../../../../assets/img/name.jpeg')} className='hush-puppies-name-size mb-2 ms-2' />
       </div>
       <div className="d-flex flex-column align-items-end my-3 me-5">
-        <InputTextIcon placeholder={DICTIONARY.search.toUpperCase()} classInput='py-2 ps-3 pe-5 fw-bold' icon={ICONS_CONSTANTS.CHEVRON_RIGHT} fs=' position-absolute' />
+        <InputTextIcon placeholder={DICTIONARY.search.toUpperCase()} classInput='py-2 ps-3 pe-5 fw-bold' icon={ICONS_CONSTANTS.CHEVRON_RIGHT} fs='5' />
         <Text text={DICTIONARY.freeSend.toUpperCase()} textColor='color-1' fs=" mt-3" />
       </div>
     </div>

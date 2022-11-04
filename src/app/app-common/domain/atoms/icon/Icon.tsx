@@ -1,6 +1,6 @@
 import "./icon.scss";
-export default function Icon({icon='', fs='', iconColor=''}) {
+export default function Icon({icon='', fs='', iconColor='', onClick=()=>{}}) {
   return (
-    <i className={`bi bi-${icon} fs-${fs} text-${iconColor}`}></i>
+    <i onClick={()=>onClick()} className={`bi bi-${icon} fs-${fs} text-${iconColor}`}></i>
   )
 }

@@ -1,26 +1,46 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState, AppThunk } from '../../../store';
 
-export interface CounterState {
-  data: any;
+export interface ProductState {
+  shoes: [];
+  shoe: {
+    foto: '',
+    precio: 0,
+    nombre: '',
+    referencia: '',
+    tallas: []
+  };
+  shoppingCar: number;
 }
 
-const initialState: CounterState = {
-  data: {},
+const initialState: ProductState = {
+  shoes: [],
+  shoe: {
+    foto: '',
+    precio: 0,
+    nombre: '',
+    referencia: '',
+    tallas : [],
+  },
+  shoppingCar: 0
 };
 
 export const ProductSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
-    get: (state, action: PayloadAction<any>) => {
-      state.data = action.payload;
+    getShoes: (state, action: PayloadAction<any>) => {
+      state.shoes = action.payload;
     },
+    getShoe: (state, action: PayloadAction<any>) => {
+      state.shoe = action.payload;
+    },
+    addToShoppingCar: (state, action: PayloadAction<any>) => {
+      state.shoppingCar += action.payload;
+    }
   },
 });
 
-export const { get } = ProductSlice.actions;
-
-export const selectCount = (state: RootState) => state.counter.value;
+export const { getShoes, getShoe, addToShoppingCar } = ProductSlice.actions;
 
 export default ProductSlice.reducer;

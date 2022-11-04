@@ -1,0 +1,21 @@
+@import "../../styles/colors.scss";
+
+.button-sizes{
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: $color_2;
+}
+
+.button-sizes-active{
+    @extend .button-sizes;
+    background-color: $color_5;
+    color: $color_2
+}
+.scale{
+    transition: all ease 0.3s;
+}
+
+.scale:hover{
+    transform: scale(1.05);
+}

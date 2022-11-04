@@ -10,5 +10,11 @@ export const DICTIONARY = {
     blog: 'blog',
     history: 'historia',
     stores: 'tiendas',
-    carShop: 'carrito'
+    carShop: 'carrito',
+    path: 'hushpuppiesco / calzado / ',
+    productCode: 'Cod. de producto ',
+    color: 'color',
+    size: 'talla',
+    sizesGuide: 'guía de tallas',
+    addToCar: 'añadir al carrito',
 }
