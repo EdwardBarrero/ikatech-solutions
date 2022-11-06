@@ -30,20 +30,20 @@ export default function ItemOrganismPreview() {
     <>
     {shoe?.foto !== '' &&
     <div className="row w-100">
-      <div className="mx-5 col-6">
+      <div className="ms-5 col-lg-6 col-12">
         <Image src={require(`../../../../../assets/img/${shoe?.foto}`)} className='item-detail-preview-size ms-5 border-bottom border-dark' />
         <div className="ms-5 mt-3">
           <Image src={require(`../../../../../assets/img/${shoe?.foto}`)} className='items-detail-preview-size mx-2 border-dark cursor-pointer' />
         </div>
       </div>
-      <div className="col-5">
+      <div className="col-12 ms-5 col-lg-5">
         <Text text={shoe?.nombre.toUpperCase()} fs='4' textColor="secondary text-start m-0" />
         <Text text={"$ " + shoe?.precio.toString()} fs='4' textColor="color-1 text-start m-0" fw='bold' />
         <Text text={DICTIONARY.productCode + shoe?.referencia} fs='6' textColor="color-2 text-start m-0" />
         <Text text={DICTIONARY.color.toUpperCase()} fs='5' textColor="secondary text-start mt-4" fw="bold"/>
         <Image src={require(`../../../../../assets/img/${shoe?.foto}`)} className='items-detail-preview-size-2 border border-dark p-2 mt-2' />
         <Text text={DICTIONARY.size.toUpperCase()} fs='5' textColor="secondary text-start mt-4" fw="bold"/>
-        <div className="row w-75">
+        <div className="row w-100">
           {shoe?.tallas?.map((size) => (
             <div onClick={()=> sizeSelectedHandle(size)} key={size} className='mx-1 my-2 col-2'>
               <Button text={size} className={sizeSelected === size ? 'button-sizes-active fs-4 fw-bold scale' : 'button-sizes fs-5 fw-bold scale'}/>
